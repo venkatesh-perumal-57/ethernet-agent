@@ -641,6 +641,10 @@ COSA_DML_IF_STATUS getIfStatus(const PUCHAR name, struct ifreq *pIfr)
 #define ETHWAN_DEF_INTF_NAME "nsgmii0"
 #elif defined (_PLATFORM_TURRIS_)
 #define ETHWAN_DEF_INTF_NAME "eth2"
+#elif defined (_COSA_QCA_ARM_) && defined(_PLATFORM_IPQ807x)
+#define ETHWAN_DEF_INTF_NAME "eth4"
+#elif defined (_COSA_QCA_ARM_) && defined (_PLATFORM_IPQ95xx)
+#define ETHWAN_DEF_INTF_NAME "eth5"
 #elif defined (_PLATFORM_BANANAPI_R4_)
 #define ETHWAN_DEF_INTF_NAME "lan0"
 #else

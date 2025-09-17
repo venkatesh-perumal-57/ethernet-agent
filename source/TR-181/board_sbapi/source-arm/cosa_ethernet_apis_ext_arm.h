@@ -45,10 +45,18 @@
 #define ETH_4_PORTS
 #endif
 
+#if defined(_COSA_QCA_ARM_)
+#define SWITCH_PORT_0_NAME "eth1"
+#define SWITCH_PORT_1_NAME "eth2"
+#define SWITCH_PORT_2_NAME "eth3"
+#define SWITCH_PORT_3_NAME "eth4"
+#define SWITCH_PORT_4_NAME "eth5"
+#else
 #define SWITCH_PORT_0_NAME "sw_1"
 #define SWITCH_PORT_1_NAME "sw_2"
 #define SWITCH_PORT_2_NAME "sw_3"
 #define SWITCH_PORT_3_NAME "sw_4"
+#endif
 
 #if defined (ETH_5_PORTS) || defined (ETH_6_PORTS) || defined (ETH_8_PORTS) || (defined(INTEL_PUMA7) && !defined(_ARRIS_XB6_PRODUCT_REQ_))
     #define SWITCH_PORT_4_NAME "sw_5"
