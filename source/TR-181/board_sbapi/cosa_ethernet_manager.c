@@ -375,7 +375,7 @@ static ethSmState_t Transition_EthWanLinkFound(PETH_SM_PRIVATE_INFO pstInfo)
 #if defined(FEATURE_RDKB_WAN_AGENT)
     if (ANSC_STATUS_SUCCESS != CosaDmlEthCreateEthLink(pstInfo->Name, stGlobalInfo.Path))
 #elif defined(FEATURE_RDKB_WAN_MANAGER)
-    #if defined(_PLATFORM_RASPBERRYPI_) || defined(_PLATFORM_TURRIS_) || defined(_PLATFORM_BANANAPI_R4_)
+    #if defined(_PLATFORM_RASPBERRYPI_) || defined(_PLATFORM_TURRIS_) || defined(_PLATFORM_BANANAPI_R4_) || defined(_COSA_QCA_ARM_)
     CHAR wanPhyName[20] = {0},out_value[20] = {0};
     if (!syscfg_get(NULL, "wan_physical_ifname", out_value, sizeof(out_value)))
     {
